@@ -52,7 +52,7 @@ initial begin
        
   #10 hresetn = 1;
   enable=1;
-  burst_wrap4(32'd1);
+  single_trans(32'd1);
 #1
 
 $finish;
@@ -86,7 +86,7 @@ endtask
 
 
 
-task burst_wrap4(input [31:0] addr);
+task single_trans(input [31:0] addr);
 begin
   in_hsel=2'bxx;
   enable=0;
