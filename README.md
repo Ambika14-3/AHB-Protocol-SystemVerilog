@@ -1,6 +1,6 @@
 # AHB-Protocol-SystemVerilog
 
-Design and Implementation of AHB Protocol in SystemVerilog.
+Design and Implementation of AHB Protocol in SystemVerilog -
 
 In this work, there is 1 master and 4 slaves. 
 The slaves are expected to be memory elements which uses the signal pins as desribed in the AHB protocols. 
