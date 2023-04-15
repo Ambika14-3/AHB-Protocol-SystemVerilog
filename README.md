@@ -18,7 +18,7 @@ This is our project which we have done in the course of Integrated Circuits Desi
 
 ->The SystemVerilog Code is then Synthesized in the Genus and performance parameters like power, area and timing (critical path) are extracted in the text files present in the Result folder. 
 
-Explanation of the work is done in the pdf present in the Docs folder. 
+More explanation of the work is done in the pdf present in the Docs folder. 
 
 
 ![image](https://user-images.githubusercontent.com/66430218/232239833-c1f0ce50-e094-4083-ae90-c1fda562ec70.png)
