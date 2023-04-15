@@ -2,6 +2,7 @@
 
 Design and Implementation of AHB Protocol in SystemVerilog -
 
+This is our project which we have done in the course of Integrated Circuits Design Laboratory at Indian Institue of Technology, Gandhinagar. 
 In this work, there is 1 master and 4 slaves. 
 The slaves are expected to be memory elements which uses the signal pins as desribed in the AHB protocols. 
 
