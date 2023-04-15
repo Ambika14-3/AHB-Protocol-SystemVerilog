@@ -19,8 +19,14 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
+
+
+//////////////////////////////////////////////////////////////////////////////////
+
 /////////////// This is the code for the MASTER //////////////////////////////////
 ////////////// The working and code is written as per the state model ///////////
+
+
 
 `define OKAY  1'b0
 `define ERROR 1'b1
@@ -84,6 +90,7 @@ begin
             hwrite= in_hwrite;
             htrans= in_htrans;
         end
+	else next_state= idle;
 //        if(hresp==`ERROR)
 //            next_state= error;   
         
@@ -93,15 +100,18 @@ begin
     begin
   
         if(hresp==`ERROR)
-            next_state= error;   
+            next_state= error; 
+	else next_state=busy;  
         if (hready==1)
         begin
             
             out_hrdata= hrdata;
             next_state= idle;
         end
+	else next_state=busy; 
         if(!enable)
             next_state= idle;
+	else next_state=busy; 
     end
     error:
     begin
