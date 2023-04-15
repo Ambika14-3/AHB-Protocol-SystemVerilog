@@ -20,6 +20,9 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
+///////////////////////////// BELOW IS THE TOP LEVEL DESIGN WHICH INTEGRATES ALL THE MODULES, THE CONNECTIONS ARE DONE AS PER THE DIAGRAM IN THE DOCS FOLDER ///////////////////////////
+
+
 module top_ahb(
 input clk,
 input hresetn,
@@ -74,8 +77,11 @@ wire [2:0] hsize;
 wire [2:0] hburst;
 wire [1:0]hsel;
 wire hwrite;
-wire [1:0] htrans;     
-
+wire [1:0] htrans; 
+ 
+ 
+ 
+// Master 
 ahb_master master(
 .clk(clk),
 .hresetn(hresetn),
@@ -104,6 +110,8 @@ ahb_master master(
 .out_hrdata(out_hrdata)
 );
 
+ 
+ // Mux
 mux mux1(
 .hrdata_1(hrdata1),
 .hrdata_2(hrdata2),
@@ -128,6 +136,8 @@ mux mux1(
 
 );
 
+ 
+ // Decoder 
 decoder decoder1(
 .hsel(hsel),
 .hsel_1(hsel1),
@@ -136,6 +146,8 @@ decoder decoder1(
 .hsel_4(hsel4)
 );
     
+ 
+ // Slave 1
 ahb_slave slave_1(
 .clk(clk),
 .hwdata(hwdata),
@@ -154,6 +166,8 @@ ahb_slave slave_1(
 
 );
 
+ 
+ // Slave 2
 ahb_slave slave_2(
 .clk(clk),
 .hwdata(hwdata),
@@ -172,6 +186,8 @@ ahb_slave slave_2(
 
 );
 
+ 
+ // Slave 3
 ahb_slave slave_3(
 .clk(clk),
 .hwdata(hwdata),
@@ -190,6 +206,9 @@ ahb_slave slave_3(
  
 );
 
+ 
+ 
+ // Slave 4
 ahb_slave slave_4(
 .clk(clk),
 .hwdata(hwdata),
