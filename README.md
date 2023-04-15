@@ -10,7 +10,7 @@ The size of memory is 256 deep, 1 byte in width.
 There are multiple FSM designs of Master and Slave possible. We have used and adopted as shown in this repo. 
 The request of a master is served with a delay of 2 clock cycles.
 
-This work is a simplified version of AHB protocol. 
+This work is a simplified version of AHB protocol and uses the signal pins apt for fulfilling the objective of 1 master with 4 slaves. Thourough testing is done by performing Single transaction write/read, wrap, increment write/read, and Unspecified increment write/read. 
 
 The SystemVerilog Code is then Synthesized in the Genus and performance parameters like power, area and timing (critical path) are extracted in the text files present in the Result folder. 
 
