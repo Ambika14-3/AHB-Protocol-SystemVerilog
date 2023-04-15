@@ -11,3 +11,13 @@ There are multiple FSM designs of Master and Slave possible. We have used and ad
 The request of a master is served with a delay of 2 clock cycles.
 
 This work is a simplified version of AHB protocol. 
+
+The SystemVerilog Code is then Synthesized in the Genus and performance parameters like power, area and timing (critical path) are extracted in the text files present in the Result folder. 
+
+Explanation of the work is done in the pdf present in the Docs folder. 
+
+
+![image](https://user-images.githubusercontent.com/66430218/232239833-c1f0ce50-e094-4083-ae90-c1fda562ec70.png)
+
+![image](https://user-images.githubusercontent.com/66430218/232239905-32391aed-06e6-4742-98a6-28af3c8e7e16.png)
+
